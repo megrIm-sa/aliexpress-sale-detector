@@ -11,7 +11,7 @@ class MemoryManager {
     if (itemsJson != null) {
         return items = List<Map<String, dynamic>>.from(json.decode(itemsJson));
     }
-    return List<Map<String, dynamic>>.empty();
+    return List<Map<String, dynamic>>.empty(growable: true);
   }
 
   static Future<void> saveItemsToMemory(items) async {
